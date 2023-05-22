@@ -1,7 +1,8 @@
 import "./contact.css";
 import axios from "axios";
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const ContactUs = () => {
   const form = useRef();
@@ -30,14 +31,14 @@ const ContactUs = () => {
 
       form.current.reset();
     } catch (error) {
-      console.log("email sending failed", error);
+      console.log("E-mail sending failed", error);
     }
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!mail) {
-      setError("Email is required");
+      setError("E-mail is required");
       return;
     }
     setError(null);
@@ -59,109 +60,99 @@ const ContactUs = () => {
       console.log("error", err.response.data);
     }
   };
-
   return (
-    <>
-      <div className="contact-us">
-        <div className="primary">
-          <h1>Have Any Question?</h1>
-          <p>
-            Please fill out this form below or email us at{" "}
-            <span>day3aStore@gmail.com</span> and we will get back to you
-            promptly regarding your request.
-          </p>
-        </div>
+    <div className="contact_container">
+      <div className="contact_info">
+        <span>
+          <h1>Are You Interested To Know More About Us And Our Products?</h1>
+        </span>
+        <p>
+          {" "}
+          Thank you for considering Stepup for your Shoes Store. Browse our
+          website or visit our stores today to experience the StepUp difference.
+        </p>
+        <h3>Find Us At</h3>
+        <i className="status"> We're Available Around The Clock! </i>
+        <p>
+          <span className="Beirut_lebanon">Beirut,Lebanon </span>
+        </p>
 
-        <div className="secondary">
-          <div className="secondary-clip"></div>
-          <div className="holder-contact">
-            <div className="insider">
-              <div className="frm-wrpr">
-                <form className="contact-form" ref={form} onSubmit={onSubmit}>
-                  <h1>CONTACT US</h1>
-                  <label htmlFor="fullName">Full Name</label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    value={fullName}
-                    placeholder="Enter your Full name"
-                    onChange={onChange}
-                    required
-                  />
-                  <label htmlFor="E-mail">E-mail</label>
-                  <input
-                    type="text"
-                    name="mail"
-                    value={mail}
-                    placeholder="Enter your email "
-                    onChange={onChange}
-                    required
-                  />
-                  {error === "Email is required" && (
-                    <div style={{ color: "red" }}>{error}</div>
-                  )}
-                  <label htmlFor="Message">Message</label>
-                  <textarea
-                    className="message"
-                    type="text"
-                    name="Message"
-                    value={Message}
-                    placeholder="Enter your Message"
-                    onChange={onChange}
-                    required
-                  />
-                  <button
-                    className="form-sbmt"
-                    type="submit"
-                    onClick={onSubmit}>
-                    SEND
-                  </button>
-                </form>
-              </div>
-              <div className="social-cntc">
-                <div className="cntct-info">
-                  <div className="info-head">
-                    <h2>Feel Free</h2>
-                    <p>To reach out at any time</p>
-                  </div>
-                  <div className="info-main">
-                    <div className="icontainer">
-                      <i className="ri-phone-line icontact"></i>
-                      <p>+961 - 81422765</p>
-                    </div>
-                    <div className="icontainer">
-                      <i className="ri-mail-line icontact"></i>
-                      <p>day3aStore@gmail.com</p>
-                    </div>
-                    <div className="icontainer">
-                      <i className="ri-map-pin-line icontact"></i>
-                      <p>
-                        Had l chou esmo<br></br> eddem l shou bi2ouloulo
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="info-foot">
-                    <div className="icontainer">
-                      <i className="ri-facebook-fill icontact"></i>
-                    </div>
-                    <div className="icontainer">
-                      <i className="ri-linkedin-fill icontact"></i>
-                    </div>
-                    <div className="icontainer">
-                      <i className="ri-instagram-line icontact"></i>
-                    </div>
-                    <div className="icontainer">
-                      <i className="ri-twitter-fill icontact"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="social_icons_contact">
+          <a href="https://www.facebook.com/">
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/">
+            <FaInstagram />
+          </a>
+          <a href="https://wa.me/">
+            <FaWhatsapp />
+          </a>
         </div>
       </div>
-    </>
+
+      <div className="form_contact_container">
+        <form className="form_contact" onSubmit={onSubmit}>
+          <h1>Get us to contact you</h1>
+          <p>
+            Please complete the details below and then click on Submit and we'll
+            be in contact
+          </p>
+          <div>
+            <label className="contact_form_name">
+              Name
+              <input
+                name="fullName"
+                type="text"
+                placeholder="Your Name"
+                value={fullName}
+                onChange={onChange}
+                required
+              />
+            </label>
+          </div>
+
+          <div>
+            <label className="contact_form_name">
+              E-mail
+              <input
+                name="mail"
+                type="text"
+                placeholder="Your E-mail"
+                value={mail}
+                onChange={onChange}
+                required
+              />
+              {error === "E-mail is required" && (
+                <div style={{ color: "red" }}>{error}</div>
+              )}
+            </label>
+          </div>
+
+          <div>
+            <label className="contact_form_name">
+              Message
+              <input
+                name="Message"
+                type="text"
+                placeholder="Your Message"
+                value={Message}
+                onChange={onChange}
+                required
+              />
+            </label>
+          </div>
+
+          <div className="send_contact_div">
+            <input
+              className="send_contact_button"
+              type="submit"
+              value="Send Message"
+              id="form_button"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 

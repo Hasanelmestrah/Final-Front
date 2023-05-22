@@ -65,16 +65,14 @@ function Footer() {
               <a href="/contactus">Mail us</a>
             </li>
             <li>
-              <a href="https://api.whatsapp.com/send/?phone=96181909322&text&type=phone_number&app_absent=0">
+              <a href="https://api.whatsapp.com/send/?phone=96176702770&text&type=phone_number&app_absent=0">
                 WhatsApp
               </a>
             </li>
           </ul>
         </section>
       </main>
-      <p className="copyright">
-        Copyright © 2023 Dayaa Store All rights reserved
-      </p>
+      <p className="copyright">Copyright © 2023 ShopPlus All rights reserved</p>
     </footer>
   );
 }
