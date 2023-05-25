@@ -10,12 +10,11 @@
 }
 
 .footer__column img {
-  width: 50%;
-  margin-top: -50px;
+  margin-left: 70px;
 }
 
 .footer__column p {
-  /* margin-top: 1rem; */
+  margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
 }

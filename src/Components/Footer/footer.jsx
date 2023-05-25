@@ -1,14 +1,14 @@
 import React from "react";
-import Logo from "../../Assets/logo.png";
+import LogoFooter from "../../Assets/logoFooter.png";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "../Footer/footer.css";
 function Footer() {
   return (
     <div>
       <div className="footer">
         <div className="footer__column">
-          <img className="img_footer" src={Logo} alt="description" />
+          <img className="img_footer" src={LogoFooter} alt="description" />
         </div>
         <div className="footer__column">
           <h3>Discover</h3>

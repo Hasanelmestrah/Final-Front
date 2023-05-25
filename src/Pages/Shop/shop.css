@@ -2,11 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
-  margin: 0 auto;
   justify-content: center;
-  width: 100%;
-  transform-style: preserve-3d;
+  margin: 0 auto;
+  max-width: 100%;
+  margin-top: 50px;
+  margin-left: 120px;
 }
+
 .swal-footer {
   text-align: center;
 }
@@ -131,12 +133,13 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: grey;
+  background-color: rgb(209, 200, 200);
   color: white;
   padding: 5px;
   border-radius: 5px;
   font-size: 14px;
   font-size: 25px;
+  border: none;
 }
 
 .image-product {
@@ -170,14 +173,14 @@
 }
 
 .price h3 {
-  color: orange;
+  color: rgb(255, 51, 0);
   font-size: 25px;
   padding-right: 20px;
   font-weight: 900;
 }
 
 .price h4 {
-  color: #999;
+  color: #cecaca;
   font-size: 25px;
   text-decoration: line-through;
 }
@@ -191,7 +194,7 @@
 }
 
 .button-card button {
-  background-color: orange;
+  background-color: rgb(26, 167, 223);
   border: none;
   border-radius: 5px;
   padding: 10px 0px;
@@ -208,7 +211,7 @@
 
 .button-card button:focus {
   outline: none;
-  border: 1px solid black;
+  border: none;
 }
 
 .image-product img {

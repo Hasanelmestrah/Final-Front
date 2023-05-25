@@ -116,13 +116,13 @@ function Home() {
           </a>
         </div>
       </section>
-      <div className="stick-fill">
+      {/* <div className="stick-fill">
         <img src={stick} alt="honey stick" />
-      </div>
+      </div> */}
       <Carousel />
-      <div className="spread-fill">
+      {/* <div className="spread-fill">
         <img src={spread} alt="honey stick" />
-      </div>
+      </div> */}
     </>
   );
 }
