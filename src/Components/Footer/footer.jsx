@@ -1,79 +1,65 @@
-import "./footer.css";
 import React from "react";
-
+import Logo from "../../Assets/logo.png";
+import { Link } from "react-router-dom";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import "../Footer/footer.css";
 function Footer() {
   return (
-    <footer>
-      <main className="footer-main">
-        <section className="clmn-1">
-          <h1>
-            <plaintext>SOCIAL LINKS</plaintext>
-          </h1>
-          <div className="media-icons-wrapper">
-            <div className="icons-wrapper">
-              <div className="icn-wrap">
-                <a href="https://www.instagram.com/dayaa.store/">
-                  <i className="ri-instagram-line"></i>
-                </a>
-              </div>
-              <div className="icn-wrap">
-                <a href="/">
-                  <i className="ri-facebook-fill"></i>
-                </a>
-              </div>
-              <div className="icn-wrap">
-                <a href="/">
-                  <i className="ri-linkedin-fill"></i>
-                </a>
-              </div>
-            </div>
-            <p>Don't Forget To Follow Us!</p>
+    <div>
+      <div className="footer">
+        <div className="footer__column">
+          <img className="img_footer" src={Logo} alt="description" />
+        </div>
+        <div className="footer__column">
+          <h3>Discover</h3>
+
+          <ul>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <li>Home</li>
+            </Link>
+            <Link to="aboutUs" style={{ textDecoration: "none" }}>
+              <li>About Us</li>
+            </Link>
+            <Link to="contactus" style={{ textDecoration: "none" }}>
+              <li>Contact Us</li>
+            </Link>
+          </ul>
+        </div>
+        <div className="footer__column">
+          <h3>Other Links</h3>
+          <ul>
+            <a href="/terms">
+              <li>Terms and Conditions</li>
+            </a>
+            <a href="/refund">
+              {" "}
+              <li>Refund and Return</li>
+            </a>
+            <a href="/privacy">
+              {" "}
+              <li>Privacy Policy</li>
+            </a>
+          </ul>
+        </div>
+
+        <div className="footer__column footer__contact">
+          <h3>Contact Us</h3>
+          <p>Phone: +961 76 702 770</p>
+          <p>Email: hasan@gmail.com</p>
+          <div>
+            <a href="https://instagram.com/">
+              <FaInstagram className="instagram-footer" />
+            </a>
+            <a href="https://wa.me/">
+              <FaWhatsapp className="instagram-footer" />
+            </a>
           </div>
-        </section>
-
-        <section className="clmn-2">
-          <h1>Products</h1>
-          <ul>
-            <li>
-              <a href="/">Moune</a>
-            </li>
-            <li>
-              <a href="/">Honey</a>
-            </li>
-            <li>
-              <a href="/">Discounts</a>
-            </li>
-          </ul>
-        </section>
-
-        <section className="clmn-3">
-          <h1>Resources</h1>
-          <ul>
-            <li>
-              <a href="/">Insta post</a>
-            </li>
-            <li>
-              <a href="/">Feedbacks</a>
-            </li>
-          </ul>
-        </section>
-
-        <section className="clmn-4">
-          <h1>Contact</h1>
-          <ul>
-            <li>
-              <a href="/contactus">Mail us</a>
-            </li>
-            <li>
-              <a href="https://api.whatsapp.com/send/?phone=96176702770&text&type=phone_number&app_absent=0">
-                WhatsApp
-              </a>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <p className="copyright">Copyright © 2023 ShopPlus All rights reserved</p>
-    </footer>
+        </div>
+      </div>
+      <div className="copywrite-footer">
+        <p>© 2023 Hasan El-Mestrah All Rights Reserved</p>
+      </div>
+    </div>
   );
 }
 

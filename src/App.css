@@ -1,50 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --main-color: #fa4299;
-  --button-color: rgb(35, 35, 35);
-  --border-color: #000;
-  --theme: rgb(0, 160, 252);
-}
-.mainer {
-  display: grid;
-  grid-template-rows: 90px auto;
-  grid-template-columns: 100%;
-}
 
-.main {
-  grid-row: 2;
+.app {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 80dvh;
-  background-color: #f6f5f3;
-}
-#cart-parent,
-#Payment-parent,
-#Adress-parent {
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-
-.none {
-  position: absolute;
-  visibility: hidden;
-  height: 0vh;
-  overflow: hidden;
-}
-@media screen and (max-width: 1073px) {
-  .main {
-    gap: 0;
-  }
-}
-
-@media all and (max-width: 840px) {
-  .mainer {
-    overflow: hidden;
-  }
 }

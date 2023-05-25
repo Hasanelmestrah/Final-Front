@@ -89,7 +89,7 @@ function Shop(props) {
         })
         .catch((err) => {
           swal({
-            title: "Something went wrong ! please try again",
+            title: "Something went wrong! Please try again.",
             icon: "error",
             buttons: {
               cancel: "Continue Shopping",
@@ -126,91 +126,36 @@ function Shop(props) {
     <div className="product-container">
       {Array.isArray(product) &&
         product.map((item, index) => (
-          <div
-            className={
-              flippedItem === item._id ? "product-card flip" : "product-card"
-            }
-            key={index}>
-            <div className="hidden-wrp">
-              <div className="infor"></div>
-              {item.discount_per === 0 ? null : (
-                <div className="discount">{item.discount_per}%</div>
-              )}
-              <div className="image-product">
-                <img src={item.image.url} alt="product is not displaying" />
-              </div>
-              <div className="content-product">
-                <h3>{item.name}</h3>
-                <h4>{item.weight} kg</h4>
-              </div>
-              <div className="price">
-                {item.price === item.price_after_discount ? (
-                  <h3>{item.price}$</h3>
-                ) : (
-                  <div className="price">
-                    <h3>{item.price_after_discount}$</h3>
-                    <h4>{item.price}$</h4>
-                  </div>
-                )}
-              </div>
-              <div className="button-card">
-                <button>Add to Cart</button>
-              </div>
+          <a href="#" className="group relative block" key={index}>
+            <div className="relative h-[350px] sm:h-[450px]">
+              <img
+                src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
+              />
+
+              <img
+                src="https://images.unsplash.com/photo-1593795899630-b6033c0fa58d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100"
+              />
             </div>
 
-            <div className="front">
-              <button
-                className="infor"
-                onClick={() => handleMoreInfoClick(item._id)}>
-                !
-              </button>
-              {item.discount_per === 0 ? null : (
-                <div className="discount">{item.discount_per}%</div>
-              )}
-              <div className="image-product">
-                <img src={item.image.url} alt="product is not displaying" />
-              </div>
-              <div className="content-product">
-                <h3>{item.name}</h3>
-                <h4>{item.weight} kg</h4>
-              </div>
-              <div className="price">
-                {item.price === item.price_after_discount ? (
-                  <h3>{item.price}$</h3>
-                ) : (
-                  <div className="price">
-                    <h3>{item.price_after_discount}$</h3>
-                    <h4>{item.price}$</h4>
-                  </div>
-                )}
-              </div>
+            <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
+              <h3 className="text-xl font-medium text-white">
+                Skinny Jeans Blue
+              </h3>
 
-              <div className="button-card">
-                <button
-                  onClick={() =>
-                    navigate("/single", { state: { id: item._id } })
-                  }>
-                  Details
-                </button>
+              <p className="mt-1.5 max-w-[40ch] text-xs text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos sequi dicta impedit aperiam ipsum!
+              </p>
 
-                <button
-                  onClick={(event) => {
-                    addToCart(event, item._id);
-                  }}>
-                  Add to Cart
-                </button>
-              </div>
+              <span className="mt-3 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white">
+                Shop Now
+              </span>
             </div>
-            <div className="back">
-              <button onClick={() => handleCardFlip(item._id)}>
-                <i className="bx bx-x"></i>
-              </button>
-
-              <div className="popup">
-                <p>{item.description}</p>
-              </div>
-            </div>
-          </div>
+          </a>
         ))}
     </div>
   );

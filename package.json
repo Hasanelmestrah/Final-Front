@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.21.4",
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
@@ -51,5 +52,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.21.5"
   }
+
 }

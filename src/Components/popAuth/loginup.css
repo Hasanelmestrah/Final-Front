@@ -1,4 +1,4 @@
-.log-popup{
+.log-popup {
   inset: 0;
   width: 100%;
   height: 90dvh;
@@ -9,21 +9,20 @@
 }
 
 @keyframes pop {
-  0%{
+  0% {
     transform: scale(0.1);
   }
 
-  10%{
+  10% {
     opacity: 1;
   }
-  100%{
+  100% {
     transform: scale(1);
     opacity: 1;
   }
 }
 
-
-.forms-wrapper{
+.forms-wrapper {
   overflow: hidden;
   position: relative;
   max-width: 600px;
@@ -41,7 +40,7 @@
   opacity: 1;
 }
 
-.log-header{
+.log-header {
   position: relative;
   height: 15vh;
   width: 200%;
@@ -53,7 +52,7 @@
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.log-header-left{
+.log-header-left {
   transition: 0.3s all ease;
   position: relative;
   height: 15vh;
@@ -67,8 +66,7 @@
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-
-.indicator-title{
+.indicator-title {
   font-size: 30px;
   font-weight: bold;
   width: 50%;
@@ -76,22 +74,22 @@
   text-align: center;
 }
 
-.log-body{
+.log-body {
   display: flex;
   /* transition: 0.30s all ease; */
   transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 100%;
-  transform: translate(0%);  
+  transform: translate(0%);
 }
 
-.log-body-left{
+.log-body-left {
   display: flex;
   /* transition: 0.30s all ease; */
   transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 100%;
-  transform: translate(-100%);  
+  transform: translate(-100%);
 }
-.child{
+.child {
   position: relative;
   width: 100%;
   flex-shrink: 0;
@@ -103,7 +101,7 @@
   gap: 20px;
 }
 
-.map{
+.map {
   width: 75%;
   height: 6vh;
   border-radius: 10px;
@@ -114,7 +112,7 @@
   border: 1px solid lightgray;
 }
 
-.map-left{
+.map-left {
   width: 75%;
   height: 6vh;
   border-radius: 10px;
@@ -125,10 +123,10 @@
   border: 1px solid lightgray;
 }
 
-.map .depending{
+.map .depending {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   background-color: orange;
   z-index: 1;
   width: 50%;
@@ -138,10 +136,10 @@
   left: 0;
 }
 
-.map-left .depending{
+.map-left .depending {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   background-color: orange;
   z-index: 1;
   width: 50%;
@@ -153,7 +151,7 @@
 }
 
 .destination-1,
-.destination-2{
+.destination-2 {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -165,13 +163,12 @@
   font-size: 20px;
 }
 
-
-.guid{
+.guid {
   margin: 0 auto;
   padding: 10px;
 }
 
-.guid button{
+.guid button {
   border: 1px solid lightgray;
   margin: 0 auto;
   padding: 5px 30px;
@@ -180,12 +177,12 @@
   color: #909090;
 }
 
-.guid button:hover{
+.guid button:hover {
   color: orange;
   border: 1px solid orange;
 }
 
-/*inputs stuff*//*inputs stuff*//*inputs stuff*//*inputs stuff*//*inputs stuff*//*inputs stuff*/ 
+/*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/
 .user-input-wrp {
   position: relative;
   align-items: center;
@@ -193,8 +190,8 @@
   justify-content: center;
 }
 
-.user-input-wrp .inputText{
-	padding: 15px 20px;
+.user-input-wrp .inputText {
+  padding: 15px 20px;
   outline: none;
   font-size: 1.25em;
   border-radius: 5px;
@@ -204,36 +201,34 @@
   color: rgb(155, 155, 155);
 }
 
-
-.user-input-wrp .inputText:focus{
-	border: 2px solid rgb(252, 185, 0);
+.user-input-wrp .inputText:focus {
+  border: 2px solid rgb(252, 185, 0);
   caret-color: rgb(252, 185, 0);
   color: rgb(252, 185, 0);
 }
 .user-input-wrp .floating-label {
-	position: absolute;
-	pointer-events: none;
-  top:50%;
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
   left: 30px;
   transform: translateY(-50%);
   font-size: 16px;
   color: rgb(155, 155, 155);
   pointer-events: none;
-  transition: .2s;
+  transition: 0.2s;
   background-color: white;
   padding: 3px;
-  line-height: 3px
+  line-height: 3px;
 }
 
 .user-input-wrp input:focus ~ .floating-label {
   color: rgb(252, 185, 0);
 }
 .user-input-wrp input:focus ~ .floating-label,
-.user-input-wrp input:not(:focus):valid ~ .floating-label{
-	top: -1px;
+.user-input-wrp input:not(:focus):valid ~ .floating-label {
+  top: -1px;
   font-size: smaller;
 }
-
 
 input:-webkit-autofill,
 textarea:-webkit-autofill,
@@ -258,7 +253,6 @@ select:-webkit-autofill {
   color: rgb(252, 185, 0);
 }
 
-
 .login-button {
   border: none;
   outline: none;
@@ -272,44 +266,43 @@ select:-webkit-autofill {
   width: 54%;
   border-radius: 5px;
   margin: 0 auto;
-  transition: .20s;
+  transition: 0.2s;
 }
 
-.login-button:hover{
+.login-button:hover {
   background-color: orange;
   transform: translateY(-3px); /* Move the button 5px up */
   box-shadow: 0px 5px 10px rgba(44, 44, 44, 0.2);
 }
 
-
-.shake{
-  animation: shake .2s 2;
+.shake {
+  animation: shake 0.2s 2;
 }
 
 @keyframes shake {
-  25%{
+  25% {
     border: 1px solid red;
     transform: translateX(6px);
   }
 
-  50%{
+  50% {
     border: 1px solid red;
     transform: translateX(-6px);
   }
 
-  75%{
+  75% {
     border: 1px solid red;
     transform: translateX(6px);
   }
 }
 
-.error-hndl{
+.error-hndl {
   color: red;
   z-index: 1;
   top: 10px;
   position: absolute;
 }
 
-.rgst-hndl{
+.rgst-hndl {
   color: red;
 }
