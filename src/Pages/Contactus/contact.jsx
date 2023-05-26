@@ -26,7 +26,7 @@ const ContactUs = () => {
         "service_c4g7cm2",
         "template_0lgipy4",
         form.current,
-        "xGN8ZyR34jEIrY5"
+        "cZ6HScb4HDCqyoYHK"
       );
 
       form.current.reset();
