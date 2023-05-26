@@ -1,6 +1,6 @@
 import "./contact.css";
 import axios from "axios";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
@@ -67,11 +67,13 @@ const ContactUs = () => {
           <h1>Are You Interested To Know More About Us And Our Products?</h1>
         </span>
         <p>
-          {" "}
-          Thank you for considering Stepup for your Shoes Store. Browse our
-          website or visit our stores today to experience the StepUp difference.
+          Thank you for placing your trust in ShopDeal. We value your feedback
+          and suggestions, as they help us enhance our offerings and deliver an
+          even better shopping experience. We are here to assist you at every
+          step of your journey, so please don't hesitate to reach out to our
+          customer support team if you have any questions or concerns..
         </p>
-        <h3>Find Us At</h3>
+        <h3>Find Us At Beirut office .</h3>
         <i className="status"> We're Available Around The Clock! </i>
         <p>
           <span className="Beirut_lebanon">Beirut,Lebanon </span>
