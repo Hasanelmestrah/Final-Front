@@ -14,6 +14,7 @@
 .sticky-header {
   position: fixed;
   width: 100%;
+
   top: 0;
   right: 0;
   z-index: 10;
@@ -178,6 +179,7 @@
 .willhidden {
   display: none;
 }
+
 @media all and (max-width: 840px) {
   .sticky-header {
     display: flex;
@@ -188,14 +190,17 @@
   .cart-logo-wrpr i {
     display: none;
   }
+
   .not {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   #menu-icon:hover {
     color: white;
   }
+
   #menu-icon {
     display: block;
     font-size: 55px;
@@ -205,17 +210,20 @@
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    width: 200px;
-    height: 29vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: #00747c;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     border-radius: 0px 0px 10px 10px;
     transition: 0.3s all ease;
+    z-index: 10;
+    transform: translateX(100%);
   }
 
   .nav-links a {
@@ -223,6 +231,7 @@
     margin: 12px 0px;
     padding: 0px 25px;
     transition: 0.3s ease;
+    color: white;
   }
 
   .user {
@@ -230,7 +239,7 @@
   }
 
   .nav-links.open {
-    right: 0%;
+    transform: translateX(0%);
   }
 
   .willhide,
