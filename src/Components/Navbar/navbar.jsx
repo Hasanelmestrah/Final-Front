@@ -55,7 +55,7 @@ function Navbar() {
   return (
     <header className={nav ? "not" : "sticky-header"}>
       <a href="/" className="logo">
-        <img src={logo} alt="Dayaa logo" className="header-logo" />
+        {/* <img src={logo} alt="shopdeal logo" className="header-logo" /> */}
         <span></span>
       </a>
       <ul className={menu}>

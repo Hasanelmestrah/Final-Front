@@ -7,6 +7,9 @@
   width: 90%;
   transform-style: preserve-3d;
 }
+.text-discount h2 {
+  margin-top: 35px;
+}
 .product-card-discount {
   width: 20%;
   display: flex;

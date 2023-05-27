@@ -96,7 +96,7 @@ function Home() {
                   />
                   <div className="product-logo">
                     <img src={plogo} alt="product" className="plogo" />
-                    <h1>Dayaa Store</h1>
+                    <h1>ShopDeal</h1>
                   </div>
                 </li>
               ))}
