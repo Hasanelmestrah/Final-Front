@@ -17,14 +17,12 @@ function Shop(props) {
   const getProducts = useCallback(async () => {
     try {
       if (categoryId === "") {
-        const response = await axios.get(
-          "https://dayaa-backend.onrender.com/item/getitem"
-        );
+        const response = await axios.get("http://localhost:5000/item/getitem");
         setProduct(response.data);
         setItem(response.data);
       } else {
         const response = await axios.get(
-          `https://dayaa-backend.onrender.com/item/items/${categoryId}`
+          `http://localhost:5000/item/items/${categoryId}`
         );
         setProduct(response.data);
       }

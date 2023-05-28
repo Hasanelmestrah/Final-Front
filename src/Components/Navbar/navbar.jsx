@@ -1,7 +1,7 @@
 import "./navbar.css";
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import logo from "../../Assets/logo.png";
+// import logo from "../../Assets/logo.png";
 
 function Navbar() {
   let navigate = useNavigate();
@@ -55,8 +55,8 @@ function Navbar() {
   return (
     <header className={nav ? "not" : "sticky-header"}>
       <a href="/" className="logo">
-        {/* <img src={logo} alt="shopdeal logo" className="header-logo" /> */}
-        <span></span>
+        {/* <img src={logo} alt="Dayaa logo" className="header-logo" /> */}
+        <span>ShopDeal</span>
       </a>
       <ul className={menu}>
         <li className={nav ? "maintain" : "normal"}>
@@ -75,7 +75,7 @@ function Navbar() {
           <a
             href="/aboutUs"
             className={location.pathname === "/aboutUs" ? "active" : ""}>
-            About Us
+            About
           </a>
         </li>
         <li className={nav ? "maintain" : "normal"}>

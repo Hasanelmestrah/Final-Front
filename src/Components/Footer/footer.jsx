@@ -1,7 +1,7 @@
 import React from "react";
 import LogoFooter from "../../Assets/logoFooter.png";
 import { Link } from "react-router-dom";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "../Footer/footer.css";
 function Footer() {
   return (
@@ -45,19 +45,22 @@ function Footer() {
         <div className="footer__column footer__contact">
           <h3>Contact Us</h3>
           <p>Phone: +961 76 702 770</p>
-          <p>Email: hasan@gmail.com</p>
-          <div>
+          <p className="email">Email: ShopDeal@gmail.com</p>
+          <div className="footer-social">
             <a href="https://instagram.com/">
               <FaInstagram className="instagram-footer" />
             </a>
             <a href="https://wa.me/">
               <FaWhatsapp className="instagram-footer" />
             </a>
+            <a href="https://facebook.com/">
+              <FaFacebook className="instagram-footer" />
+            </a>
           </div>
         </div>
       </div>
       <div className="copywrite-footer">
-        <p>© 2023 Hasan El-Mestrah All Rights Reserved</p>
+        <p>© 2023 ShopDeal All Rights Reserved</p>
       </div>
     </div>
   );

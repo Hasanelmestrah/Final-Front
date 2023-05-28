@@ -1,50 +1,27 @@
 .not {
   position: fixed;
   width: 100%;
-  height: 44px; /* Adjust the height to your desired value */
   top: 0;
   right: 0;
   z-index: 10;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 300px 4fr 1fr;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
   align-items: center;
-  padding: 0 16px; /* Adjust the padding to your desired value */
-  background-color: #424040; /* Change the background color to match Apple's navbar */
-  transition: all 0.2s ease;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
 }
-
-.not a {
-  color: #b1acac; /* Change the text color to match Apple's navbar */
-  text-decoration: none;
-  font-size: 14px; /* Adjust the font size to your desired value */
-  margin-left: 16px; /* Add some margin between the links */
-}
-
-.not a:hover {
-  text-decoration: underline; /* Add underline on hover if desired */
-}
-
 .sticky-header {
   position: fixed;
   width: 100%;
-  height: 44px; /* Adjust the height to your desired value */
-
   top: 0;
   right: 0;
   z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px; /* Adjust the padding to your desired value */
-  background-color: #424040; /* Change the background color to match Apple's navbar */
+  display: grid;
+  grid-template-columns: 300px 4fr 1fr;
+  background-color: #454545;
   transition: all 0.2s ease;
-}
-
-.sticky-header a {
-  color: #fff; /* Change the text color to match Apple's navbar */
-  text-decoration: none;
-  font-size: 14px; /* Adjust the font size to your desired value */
-  margin-left: 16px; /* Add some margin between the links */
+  align-items: center;
 }
 
 .logo {
@@ -53,7 +30,7 @@
 }
 
 .logo img {
-  width: 100%;
+  width: 105px;
   cursor: pointer;
   height: 90px;
 }
@@ -87,16 +64,16 @@
   transition: all 0.3s ease;
 }
 .nav-links li a.active {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .maintain a:is(:hover, :focus, :focus-visible) {
-  color: #454545 !important;
+  color: rgb(173, 26, 26) !important;
   outline: none;
 }
 
 .maintain a.active {
-  color: rgb(255, 255, 255) !important;
+  color: rgb(160, 18, 18) !important;
 }
 
 .header-icons {
@@ -121,27 +98,18 @@
   align-items: center;
 }
 
-.header-icons p {
-  margin-inline: 10px;
+.head-icons p {
+  margin-inline: 25px 10px;
   font-size: 1.1rem;
   font-weight: bold;
   transition: all 0.3s ease;
-  color: #b1acac; /* Change the text color to match Apple's navbar */
-  text-decoration: none;
 }
-.header-icons p:hover {
-  color: white; /* Change the text color on hover */
-  text-decoration: underline; /* Add underline on hover if desired */
-}
+
 .head-icons p:is(:hover, :focus, :focus-visible) {
-  color: #454545;
+  color: rgb(255, 255, 255);
   outline: none;
 }
-.header-logo {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-}
+
 .user {
   display: flex;
   align-items: center;
@@ -210,7 +178,6 @@
 .willhidden {
   display: none;
 }
-
 @media all and (max-width: 840px) {
   .sticky-header {
     display: flex;
@@ -221,17 +188,14 @@
   .cart-logo-wrpr i {
     display: none;
   }
-
   .not {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   #menu-icon:hover {
     color: white;
   }
-
   #menu-icon {
     display: block;
     font-size: 55px;
@@ -241,36 +205,43 @@
   }
 
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #00747c;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 29vh;
+    background-color: #454545;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     border-radius: 0px 0px 10px 10px;
     transition: 0.3s all ease;
-    z-index: 10;
-    transform: translateX(100%);
   }
-
-  .nav-links a {
-    display: block;
+  .nav-links p:hover {
+    color: white;
+  }
+  .nav-links p {
+    display: flex;
     margin: 12px 0px;
     padding: 0px 25px;
     transition: 0.3s ease;
-    color: white;
+    justify-content: center;
   }
-
+  .nav-links a {
+    display: flex;
+    margin: 12px 0px;
+    padding: 0px 25px;
+    transition: 0.3s ease;
+    justify-content: center;
+  }
   .user {
     display: none;
   }
 
   .nav-links.open {
-    transform: translateX(0%);
+    right: 0%;
+    width: 100%; /* Adjust this value as needed */
+    max-width: 400px; /* Adjust this value as needed */
   }
 
   .willhide,
