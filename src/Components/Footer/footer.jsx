@@ -60,7 +60,7 @@ function Footer() {
         </div>
       </div>
       <div className="copywrite-footer">
-        <p>© 2023 ShopDeal All Rights Reserved</p>
+        <p>© 2023 Hasan El-Mestrah All Rights Reserved</p>
       </div>
     </div>
   );
