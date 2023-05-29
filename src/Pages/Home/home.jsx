@@ -2,9 +2,9 @@ import "./home.css";
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import plogo from "../../Assets/logo.png";
-import stick from "../../Assets/honeystick.png";
+// import stick from "../../Assets/honeystick.png";
 import Carousel from "../../Components/Carousel/carousel";
-import spread from "../../Assets/spices-spread.png";
+// import spread from "../../Assets/spices-spread.png";
 import axios from "axios";
 
 //we will bring the data from database instead fir now, 3m 7ot data statick, just to apply the effect, the slide index will determine the id of the element, and we will fetch the data by id, and display them in the 'hero left' section below
