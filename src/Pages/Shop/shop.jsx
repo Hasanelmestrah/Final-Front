@@ -17,12 +17,12 @@ function Shop(props) {
   const getProducts = useCallback(async () => {
     try {
       if (categoryId === "") {
-        const response = await axios.get("http:localhost:5000/item/getitem");
+        const response = await axios.get("http://localhost:5000/item/getitem");
         setProduct(response.data);
         setItem(response.data);
       } else {
         const response = await axios.get(
-          `http:localhost:5000/item/items/${categoryId}`
+          `http://localhost:5000item/items/${categoryId}`
         );
         setProduct(response.data);
       }
@@ -54,7 +54,7 @@ function Shop(props) {
 
       axios
         .post(
-          `http:localhost:5000/cart/${id}`,
+          `http://localhost:5000/cart/${id}`,
           { productId: key },
           {
             headers: {

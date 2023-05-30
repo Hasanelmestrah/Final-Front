@@ -85,87 +85,92 @@ function LoginUp() {
   };
   return (
     <>
-      <form className="form_container">
-        <div className="logo_container"></div>
-        <div className="title_container">
-          <p className="title">Create an Account</p>
-          <span className="subtitle">
-            Get started with our app, just create an account and enjoy the
-            experience.
-          </span>
+      <section className="log-popup">
+        <div className="forms-wrapper">
+          <div className={lol === true ? "log-header-left" : "log-header"}>
+            <h1 className="indicator-title">Login</h1>
+            <h1 className="indicator-title">Register</h1>
+          </div>
+          <div className={lol === true ? "map-left" : "map"}>
+            <div className="depending"></div>
+            <button className="destination-1" onClick={register}>
+              login
+            </button>
+            <button className="destination-2" onClick={login}>
+              register
+            </button>
+          </div>
+          <div className={lol === true ? "log-body-left" : "log-body"}>
+            <form className="login child" onSubmit={handleLoginSubmit}>
+              {invalid === false ? (
+                <p className="error-hndl">Invalid Email or password</p>
+              ) : null}
+              <div className="user-input-wrp">
+                <input
+                  className={invalid ? "inputText" : "inputText shake"}
+                  id="email"
+                  type="text"
+                  required
+                />
+                <span className="floating-label">Email</span>
+              </div>
+              <div className="user-input-wrp">
+                <input
+                  className={invalid ? "inputText" : "inputText shake"}
+                  id="password"
+                  type="password"
+                  required
+                />
+                <span className="floating-label">Password</span>
+              </div>
+              <button className="login-button" type="submit">
+                Login
+              </button>
+            </form>
+            <form className="register child" onSubmit={handleRegisterSubmit}>
+              {invalid === false ? <p className="rgst-hndl">{error}</p> : null}
+              <div className="user-input-wrp">
+                <input
+                  className={invalid === true ? "inputText" : "inputText shake"}
+                  id="name"
+                  type="text"
+                  required
+                />
+                <span className="floating-label">Name</span>
+              </div>
+              <div className="user-input-wrp">
+                <input
+                  className={invalid ? "inputText" : "inputText shake"}
+                  id="Email"
+                  type="text"
+                  required
+                />
+                <span className="floating-label">Email</span>
+              </div>
+              <div className="user-input-wrp">
+                <input
+                  className={invalid ? "inputText" : "inputText shake"}
+                  id="Password"
+                  type="password"
+                  required
+                />
+                <span className="floating-label">Password</span>
+              </div>
+              <button className="login-button" type="submit">
+                Register
+              </button>
+            </form>
+          </div>
+          <div className="guid">
+            <button
+              onClick={() => {
+                navigate(-1);
+              }}>
+              Cancel
+            </button>
+          </div>
         </div>
-        <br />
-        <div className="input_container">
-          <label className="input_label" htmlFor="email_field">
-            Email
-          </label>
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon">
-            <path
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              strokeWidth="1.5"
-              stroke="#141B34"
-              d="M7 8.5L9.94202 10.2394C11.6572 11.2535 12.3428 11.2535 14.058 10.2394L17 8.5"></path>
-            <path
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              stroke="#141B34"
-              d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z"></path>
-          </svg>
-          <input
-            placeholder="name@mail.com"
-            title="Input title"
-            name="input-name"
-            type="text"
-            className="input_field"
-            id="email_field"
-          />
-        </div>
-        <div className="input_container">
-          <label className="input_label" htmlFor="password_field">
-            Password
-          </label>
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon">
-            <path
-              strokeLinecap="round"
-              strokeWidth="1.5"
-              stroke="#141B34"
-              d="M18 11.006V12.9999C18 15.5478 16.4771 17.6743 14.0036 19.1651C11.5301 20.656 8.49994 21 6 21C3.50006 21 0.5 21 0.5 21C0.5 21 0.5 21 0.5 19.1651C0.5 17.6743 1.97795 15.5478 4.4515 14.057C6.92504 12.5662 9.92484 11.0046 12 11.0046H18Z"></path>
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              stroke="#141B34"
-              d="M12 7.00461C14.21 7.00461 16 5.21461 16 3.00461C16 0.794614 14.21 -0.995386 12 -0.995386C9.78999 -0.995386 8 0.794614 8 3.00461C8 5.21461 9.78999 7.00461 12 7.00461Z"></path>
-          </svg>
-          <input
-            placeholder="********"
-            title="Input title"
-            name="input-name"
-            type="password"
-            className="input_field"
-            id="password_field"
-            required
-          />
-        </div>
-        <div className="button_container">
-          <button type="submit" className="button">
-            Sign Up
-          </button>
-        </div>
-      </form>
+      </section>
     </>
   );
 }
