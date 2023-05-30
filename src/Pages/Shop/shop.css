@@ -5,7 +5,9 @@
   margin: 0 auto;
   justify-content: center;
   width: 100%;
-  transform-style: preserve-3d;
+  height: 100%;
+  /* margin-left: 100px; */
+  /* transform-style: preserve-3d; */
 }
 .swal-footer {
   text-align: center;
@@ -49,8 +51,8 @@
 }
 
 .infor:hover {
-  border: 2px solid #ffc400;
-  color: #ffc400;
+  border: 2px solid #2589e8;
+  color: red;
 }
 
 .flip {
@@ -106,7 +108,7 @@
 
 .back button:hover i {
   transform: rotate(90deg);
-  color: orange;
+  color: red;
 }
 
 .back::-webkit-scrollbar {
@@ -119,12 +121,12 @@
 }
 
 .back::-webkit-scrollbar-thumb {
-  background: #ffc400;
+  background: #2589e8;
   border-radius: 15px;
 }
 
 .back::-webkit-scrollbar-thumb:hover {
-  background: #f2a34e;
+  background: red;
 }
 
 .discount {
@@ -170,7 +172,7 @@
 }
 
 .price h3 {
-  color: orange;
+  color: rgb(196, 5, 5);
   font-size: 25px;
   padding-right: 20px;
   font-weight: 900;
@@ -191,7 +193,7 @@
 }
 
 .button-card button {
-  background-color: orange;
+  background-color: rgb(56, 53, 47);
   border: none;
   border-radius: 5px;
   padding: 10px 0px;
@@ -203,7 +205,7 @@
 }
 
 .button-card button:hover {
-  background-color: darkgoldenrod;
+  background-color: #2589e8;
 }
 
 .button-card button:focus {
@@ -235,5 +237,18 @@
 
   .image-product img {
     max-height: 373px;
+  }
+  .product-container {
+    justify-content: center;
+  }
+  .category-container {
+    margin-top: 70px;
+    width: 90%;
+    position: relative;
+    right: 27px;
+    justify-content: center;
+  }
+  .main {
+    justify-content: center;
   }
 }

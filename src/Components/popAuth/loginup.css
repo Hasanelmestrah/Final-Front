@@ -44,7 +44,7 @@
   position: relative;
   height: 15vh;
   width: 200%;
-  background-color: orange;
+  background-color: #454545;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,7 +57,7 @@
   position: relative;
   height: 15vh;
   width: 200%;
-  background-color: orange;
+  background-color: #454545;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -127,7 +127,7 @@
   display: block;
   position: absolute;
   content: "";
-  background-color: orange;
+  background-color: #454545;
   z-index: 1;
   width: 50%;
   height: 100%;
@@ -140,7 +140,7 @@
   display: block;
   position: absolute;
   content: "";
-  background-color: orange;
+  background-color: #454545;
   z-index: 1;
   width: 50%;
   height: 100%;
@@ -178,8 +178,8 @@
 }
 
 .guid button:hover {
-  color: orange;
-  border: 1px solid orange;
+  color: #454545;
+  border: 1px solid #454545;
 }
 
 /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/ /*inputs stuff*/

@@ -35,7 +35,10 @@ function Slider() {
             className={
               slideIndex === index + 1 ? "slide active-anim" : "slide"
             }>
-            <img src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`} />
+            <img
+              src={process.env.PUBLIC_URL + `/assets/img${index + 1}.jpg`}
+              alt={`Image ${index + 1}`}
+            />
           </div>
         );
       })}
@@ -45,6 +48,7 @@ function Slider() {
       <div className="container-dots">
         {Array.from({ length: 3 }).map((item, index) => (
           <div
+            key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "dot active" : "dot"}></div>
         ))}
@@ -52,4 +56,5 @@ function Slider() {
     </div>
   );
 }
+
 export default Slider;

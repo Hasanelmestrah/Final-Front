@@ -7,6 +7,8 @@
   margin-top: 50px;
   transform-style: preserve-3d;
   min-height: 100dvh;
+  justify-content: center;
+  margin-left: 50px;
 }
 
 .category-button {
@@ -16,7 +18,7 @@
 }
 
 .category-button.selected {
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid rgb(252, 36, 7);
 }
 
 .category-button.active {
@@ -24,7 +26,6 @@
   color: #ffffff;
 }
 
-
-.category-buttons{
+.category-buttons {
   border-bottom: 2px solid lightgray;
 }

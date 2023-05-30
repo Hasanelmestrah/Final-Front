@@ -1,5 +1,7 @@
 import "./home.css";
-import React from "react";
+import Loader from "/home/hasan/Desktop/Final-Front/src/Components/Loader/Loader.jsx";
+import React, { useState, useEffect } from "react";
+
 // import { useState, useEffect, useRef } from "react";
 // import plogo from "../../Assets/logo.png";
 // import stick from "../../Assets/honeystick.png";
@@ -10,6 +12,19 @@ import Slider from "./Slider";
 
 //we will bring the data from database instead fir now, 3m 7ot data statick, just to apply the effect, the slide index will determine the id of the element, and we will fetch the data by id, and display them in the 'hero left' section below
 function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for 2 seconds
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   // const [fixed, setFixed] = useState(false);
   // const [currentSlide, setCurrentSlide] = useState(0);
   // const carouselRef = useRef(null);
