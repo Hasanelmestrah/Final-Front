@@ -86,11 +86,11 @@ function Navbar() {
           </a>
         </li>
         <li className={`willhidden ${nav ? "maintain" : "normal"}`}>
-          <a
+          {/* <a
             href="/cart"
             className={location.pathname === "/contactus" ? "active" : ""}>
             Cart
-          </a>
+          </a> */}
         </li>
         <li className={nav ? "maintain" : "normal"}>
           <a
