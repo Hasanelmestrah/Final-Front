@@ -11,7 +11,7 @@ function Carousel() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/item/getdiscount")
+      .get("https://final-back-p191.onrender.com/item/getdiscount")
       .then((res) => {
         setData(res.data);
       })

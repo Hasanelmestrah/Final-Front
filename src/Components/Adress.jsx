@@ -23,7 +23,7 @@ const Adress = () => {
     let token = sessionStorage.getItem("token");
 
     axios
-      .get(`http:localhost:5000/adress/${id}`, {
+      .get(`https://final-back-p191.onrender.com/adress/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
 
@@ -45,7 +45,7 @@ const Adress = () => {
 
   async function updateAddress(event) {
     event.preventDefault();
-    const x = await fetch(`http://localhost:5000/adress/${id}`, {
+    const x = await fetch(`https://final-back-p191.onrender.com/adress/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

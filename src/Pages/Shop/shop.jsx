@@ -17,12 +17,14 @@ function Shop(props) {
   const getProducts = useCallback(async () => {
     try {
       if (categoryId === "") {
-        const response = await axios.get("http://localhost:5000/item/getitem");
+        const response = await axios.get(
+          "https://final-back-p191.onrender.com/item/getitem"
+        );
         setProduct(response.data);
         setItem(response.data);
       } else {
         const response = await axios.get(
-          `http://localhost:5000item/items/${categoryId}`
+          `https://final-back-p191.onrender.com/item/items/${categoryId}`
         );
         setProduct(response.data);
       }
@@ -54,7 +56,7 @@ function Shop(props) {
 
       axios
         .post(
-          `http://localhost:5000/cart/${id}`,
+          `https://final-back-p191.onrender.com/cart/${id}`,
           { productId: key },
           {
             headers: {

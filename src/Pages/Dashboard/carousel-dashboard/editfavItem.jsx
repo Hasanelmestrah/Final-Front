@@ -32,7 +32,7 @@ function EditfavItem(props) {
     };
     try {
       await axios.put(
-        `http://localhost:5000/fav/updfav/${itemid}`,
+        `https://final-back-p191.onrender.com/fav/updfav/${itemid}`,
         updatedItem,
         config1
       );

@@ -36,8 +36,8 @@ function Slider() {
               slideIndex === index + 1 ? "slide active-anim" : "slide"
             }>
             <img
-              src={process.env.PUBLIC_URL + `/assets/img${index + 1}.jpg`}
-              alt={`Image ${index + 1}`}
+              src={process.env.PUBLIC_URL + `/Imgs/img${index + 1}.jpg`}
+              alt={`Product ${index + 1}`}
             />
           </div>
         );

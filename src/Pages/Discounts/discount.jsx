@@ -20,7 +20,7 @@ function Discounts(props) {
   const getdiscounts = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/item/getdiscount`
+        `https://final-back-p191.onrender.com/item/getdiscount`
       );
       setProduct(response.data);
       setItem(response.data);
@@ -32,7 +32,7 @@ function Discounts(props) {
   const getsingleproduct = async (id) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/item/getitem/${id}`
+        `https://final-back-p191.onrender.com/item/getitem/${id}`
       );
       setSingle(response.data);
       setShowPopup(true);
@@ -65,7 +65,7 @@ function Discounts(props) {
 
       axios
         .post(
-          `http://localhost:5000/cart/${id}`,
+          `https://final-back-p191.onrender.com/cart/${id}`,
           { productId: key },
           {
             headers: {

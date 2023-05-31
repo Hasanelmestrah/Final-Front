@@ -25,7 +25,9 @@ function Favorites() {
   };
   //get items again
   const loadclass = async () => {
-    const res = await axios.get("http://localhost:5000/fav/getfav");
+    const res = await axios.get(
+      "https://final-back-p191.onrender.com/fav/getfav"
+    );
     setFavorite(res.data);
   };
 
@@ -49,7 +51,10 @@ function Favorites() {
       dangerMode: true,
     }).then(async (willDelete) => {
       if (willDelete) {
-        await axios.delete(`http://localhost:5000/fav/delfav/${id}`, config1);
+        await axios.delete(
+          `https://final-back-p191.onrender.com/fav/delfav/${id}`,
+          config1
+        );
         loadclass();
         swal("Poof! The item has been deleted!", {
           icon: "success",
@@ -69,7 +74,7 @@ function Favorites() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/fav/addfav",
+        "https://final-back-p191.onrender.com/fav/addfav",
         formData,
         {
           headers: {
@@ -101,7 +106,7 @@ function Favorites() {
   const editfavItem = async (id) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/fav/updfav/${id}`,
+        `https://final-back-p191.onrender.com/fav/updfav/${id}`,
         {},
         {
           headers: {

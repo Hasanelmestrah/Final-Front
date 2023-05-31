@@ -21,12 +21,12 @@ function Items(props) {
     try {
       if (categoryId === "") {
         const response = await axios.get(
-          "http://localhost:5000/item/items/${categoryId}"
+          "https://final-back-p191.onrender.com/item/items/${categoryId}"
         );
         setItems(response.data);
       } else {
         const response = await axios.get(
-          `http://localhost:5000/item/items/${categoryId}`
+          `https://final-back-p191.onrender.com/item/items/${categoryId}`
         );
         setItems(response.data);
       }
@@ -60,7 +60,10 @@ function Items(props) {
       dangerMode: true,
     }).then(async (willDelete) => {
       if (willDelete) {
-        await axios.delete(`http://localhost:5000/item/delitem/${id}`, config1);
+        await axios.delete(
+          `https://final-back-p191.onrender.com/item/delitem/${id}`,
+          config1
+        );
         getProducts(categoryId);
         swal("Poof! The item has been deleted!", {
           icon: "success",
@@ -75,7 +78,7 @@ function Items(props) {
   const editItem = async (id) => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/item/upditem/${id}`,
+        `https://final-back-p191.onrender.com/item/upditem/${id}`,
         {},
         {
           headers: {

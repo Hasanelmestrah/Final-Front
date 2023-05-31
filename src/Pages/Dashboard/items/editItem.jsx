@@ -50,7 +50,7 @@ function EditItem(props) {
     };
     try {
       await axios.put(
-        `http://localhost:5000/item/upditem/${itemid}`,
+        `https://final-back-p191.onrender.com/item/upditem/${itemid}`,
         updatedItem,
         config1
       );

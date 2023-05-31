@@ -30,7 +30,7 @@ function Users() {
   useEffect(() => {
     let token = sessionStorage.getItem("token");
     axios
-      .get("http://localhost:5000/api/get", {
+      .get("https://final-back-p191.onrender.com/api/get", {
         headers: { Authorization: `Bearer ${token}` },
       })
 

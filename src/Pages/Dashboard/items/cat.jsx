@@ -24,7 +24,9 @@ function Cat() {
 
   const getcategories = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/cat/getcategory");
+      const response = await axios.get(
+        "https://final-back-p191.onrender.com/cat/getcategory"
+      );
       setCategory(response.data);
     } catch (error) {
       console.error(error);
@@ -35,7 +37,7 @@ function Cat() {
     if (categoryId) {
       try {
         const response = await axios.get(
-          `http://localhost:5000/item/getitembycategory/${categoryId}`
+          `https://final-back-p191.onrender.com/item/getitembycategory/${categoryId}`
         );
         setProducts(response.data);
       } catch (error) {
@@ -62,7 +64,7 @@ function Cat() {
 
     try {
       await axios
-        .post("http://localhost:5000/item/additem", formData, {
+        .post("https://final-back-p191.onrender.com/item/additem", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,

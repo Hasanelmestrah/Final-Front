@@ -41,7 +41,7 @@ const Orders = () => {
   useEffect(() => {
     let token = sessionStorage.getItem("token");
     axios
-      .get("https://localhost:5000/order", {
+      .get("https://final-back-p191.onrender.com/order", {
         headers: { Authorization: `Bearer ${token}` },
       })
 

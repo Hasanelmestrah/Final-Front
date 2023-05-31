@@ -16,7 +16,7 @@ function Single() {
     const getItem = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/item/getitem/${location.state.id}`
+          `https://final-back-p191.onrender.com/item/getitem/${location.state.id}`
         );
         setItem(response.data);
       } catch (error) {
@@ -32,7 +32,7 @@ function Single() {
 
       axios
         .post(
-          `http://localhost:5000/cart/${id}`,
+          `https://final-back-p191.onrender.com/cart/${id}`,
           { productId: key },
           {
             headers: {

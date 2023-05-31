@@ -15,7 +15,7 @@ const Carts = () => {
   function Remove(event, key) {
     axios
       .delete(
-        `http://localhost:5000/cart/${id}/${key}`,
+        `https://final-back-p191.onrender.com/cart/${id}/${key}`,
 
         {
           headers: {
@@ -52,7 +52,7 @@ const Carts = () => {
   async function Checkout() {
     axios
       .post(
-        `http://localhost:5000/order/${id}`,
+        `https://final-back-p191.onrender.com/order/${id}`,
         {},
         {
           headers: {
@@ -73,7 +73,7 @@ const Carts = () => {
   function Decrement(event, key) {
     axios
       .patch(
-        `http://localhost:5000/cart/${id}`,
+        `https://final-back-p191.onrender.com/cart/${id}`,
         { productId: key },
         {
           headers: {
@@ -95,7 +95,7 @@ const Carts = () => {
   function Increment(event, key) {
     axios
       .post(
-        `http://localhost:5000/cart/${id}`,
+        `https://final-back-p191.onrender.com/cart/${id}`,
         { productId: key },
         {
           headers: {
@@ -121,7 +121,7 @@ const Carts = () => {
     let id = sessionStorage.getItem("user_id");
     let token = sessionStorage.getItem("token");
     axios
-      .get(`http://localhost:5000/cart/${id}`, {
+      .get(`https://final-back-p191.onrender.com/cart/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
 

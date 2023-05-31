@@ -27,10 +27,13 @@ function LoginUp() {
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/login", {
-        email: event.target.email.value,
-        password: event.target.password.value,
-      });
+      const response = await axios.post(
+        "https://final-back-p191.onrender.com/api/login",
+        {
+          email: event.target.email.value,
+          password: event.target.password.value,
+        }
+      );
       if (response.data.userType === "superAdmin") {
         setText(true);
 
@@ -59,11 +62,14 @@ function LoginUp() {
     event.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/signup", {
-        name: event.target.name.value,
-        email: event.target.Email.value,
-        password: event.target.Password.value,
-      });
+      const response = await axios.post(
+        "https://final-back-p191.onrender.com/api/signup",
+        {
+          name: event.target.name.value,
+          email: event.target.Email.value,
+          password: event.target.Password.value,
+        }
+      );
       if (response.status === 201) {
         navigate("/");
       }

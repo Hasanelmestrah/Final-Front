@@ -7,7 +7,12 @@
   align-items: center;
   background-color: #ffffff;
 }
-
+h1 {
+  color: white;
+}
+.destination-1::after {
+  color: white;
+}
 @keyframes pop {
   0% {
     transform: scale(0.1);
@@ -127,7 +132,7 @@
   display: block;
   position: absolute;
   content: "";
-  background-color: rgb(110, 105, 95);
+  background-color: rgb(76, 170, 214);
   z-index: 1;
   width: 50%;
   height: 100%;
@@ -140,7 +145,7 @@
   display: block;
   position: absolute;
   content: "";
-  background-color: rgb(163, 140, 96);
+  background-color: rgb(76, 170, 214);
   z-index: 1;
   width: 50%;
   height: 100%;
@@ -202,9 +207,9 @@
 }
 
 .user-input-wrp .inputText:focus {
-  border: 2px solid rgb(252, 185, 0);
-  caret-color: rgb(252, 185, 0);
-  color: rgb(252, 185, 0);
+  border: 2px solid rgb(75, 74, 72);
+  caret-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 .user-input-wrp .floating-label {
   position: absolute;
@@ -222,7 +227,7 @@
 }
 
 .user-input-wrp input:focus ~ .floating-label {
-  color: rgb(252, 185, 0);
+  color: rgb(0, 0, 0);
 }
 .user-input-wrp input:focus ~ .floating-label,
 .user-input-wrp input:not(:focus):valid ~ .floating-label {
@@ -270,7 +275,7 @@ select:-webkit-autofill {
 }
 
 .login-button:hover {
-  background-color: rgb(0, 255, 255);
+  background-color: #2589e8;
   transform: translateY(-3px); /* Move the button 5px up */
   box-shadow: 0px 5px 10px rgba(44, 44, 44, 0.2);
 }
