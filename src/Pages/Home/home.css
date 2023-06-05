@@ -91,7 +91,7 @@
 .hero-shop {
   width: 100%;
   position: relative;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,7 @@
   width: 70%;
   height: 100%;
   right: 0;
-  background-image: url("../../Assets/Screenshot from 2023-05-29 16-52-36.png");
+  background-image: url("../../Assets/Abstract\ Geometric\ Line\ Patterns\,\ Geometry\,\ Creative\,\ Line\ PNG\ Transparent\ Clipart\ Image\ and\ PSD\ File\ for\ Free\ Download_auto_x2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -144,10 +144,12 @@
   color: white;
 }
 .shop-btn {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
   border-radius: 15px;
   padding: 20px 50px;
   background-color: #454545;
-  font-size: 3em;
   color: rgb(255, 255, 255);
   margin-top: 10vh;
   transition: 0.3s all ease;
@@ -157,7 +159,6 @@
 .shop-btn:focus {
   outline: none;
   box-shadow: 0px 0px 16px 3px #ffffff;
-  border-radius: 25px;
 }
 .clip {
   position: absolute;
@@ -182,10 +183,12 @@
 }
 
 .carousel-wrapper {
+  margin-top: 150px;
+
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   display: flex;
   overflow: auto;
   align-items: center;
@@ -272,7 +275,7 @@
   }
 
   .hero-shop {
-    height: 50vh;
+    height: 40vh;
   }
 
   .right-wrapper {
@@ -304,7 +307,7 @@
     padding: 15px;
     background-color: #3a3834;
     font-size: 2rem;
-    color: #484848;
+    color: #ffffff;
     margin-top: 0;
     transition: 0.3s all ease;
   }
@@ -360,9 +363,9 @@
 @media screen and (max-width: 752px) {
   .shop-btn {
     padding: 10px;
-    background-color: #3d3c39;
+    background-color: #454545;
     font-size: 1.5rem;
-    color: #484848;
+    color: #ffffff;
     margin-top: 0;
     transition: 0.3s all ease;
   }
@@ -401,9 +404,9 @@
 
   .shop-btn {
     padding: 15px;
-    background-color: #706e69;
+    background-color: #454545;
     font-size: 1.4rem;
-    color: #484848;
+    color: #ffffff;
     margin-top: 0;
     margin-left: 20px;
     transition: 0.3s all ease;

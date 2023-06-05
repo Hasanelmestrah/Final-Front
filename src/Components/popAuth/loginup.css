@@ -7,8 +7,8 @@
   align-items: center;
   background-color: #ffffff;
 }
-h1 {
-  color: white;
+.indicator-title {
+  color: rgb(255, 255, 255);
 }
 .destination-1::after {
   color: white;

@@ -12,7 +12,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../../Assets/wallpaperflare.com_wallpaper.jpg");
+  background-image: url("../../Assets/transparent\ connected\ dots\ background\ -\ Google\ Search_auto_x2.jpg");
 }
 .text {
   width: calc(100% - 250px);
@@ -36,14 +36,19 @@
 }
 
 .text p {
-  font-size: 18px;
+  font-family: "Jost", "Helvetica Neue", Arial, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 550;
+  font-size: 20px;
   line-height: 25px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .about img {
   width: 150px;
 }
 .about {
+  position: relative;
+  right: 340px;
   width: 100%;
   max-width: 1130px;
   margin: 0 auto;
@@ -59,7 +64,7 @@
 
 .aboutbutton {
   font-size: 18px;
-  background: #454545;
+  background: #000000;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -79,6 +84,7 @@
     justify-content: center;
     padding-bottom: 15vh;
     margin-top: -8vh;
+    right: 0;
   }
 
   .about-us {
@@ -105,7 +111,8 @@
   }
 
   .text p {
-    font-size: 1rem;
+    font-weight: 550;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 30px;
   }
@@ -114,4 +121,13 @@
     font-size: 1rem;
     padding: 0.8em 2em;
   }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1600px) {
+  .about {
+    right: 60px; /* Adjust the right offset value as needed */
+    margin-right: 0; /* Reset the right margin */
+  }
+
+  /* Rest of the styles... */
 }
