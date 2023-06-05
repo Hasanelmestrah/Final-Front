@@ -12,13 +12,13 @@ function AboutUs() {
             <span className="aboutspan">More</span>
           </h5>
           <p>
-            Welcome to your Home, the ultimate destination for a wide range of
-            high-quality products. Explore our diverse selection of electronics
-            gadgets, solar power, and personal accessories. Rest assured that
-            every product on our website meets the highest standards of
-            excellence. Enjoy the convenience of cash on delivery, making your
-            shopping experience effortless and worry-free. Start browsing now to
-            discover superior quality items that will enhance your lifestyle.
+            Welcome To Our Website, The Ultimate Destination For A Wide Range Of
+            High-Quality Products. Explore Our Diverse Selection Of Electronics
+            Gadgets, Solar Power, And Personal Accessories. Rest Assured That
+            Every Product On Our Website Meets The Highest Standards Of
+            Excellence. Enjoy The Convenience Of Cash On Delivery, Making Your
+            Shopping Experience Effortless And Worry-Free. Start Browsing Now To
+            Discover Superior Quality Items That Will Enhance Your Lifestyle.
           </p>
           <div className="data">
             <a href="/contactus" className="aboutbutton">

@@ -20,14 +20,14 @@
 }
 
 .text h2 {
-  font-size: 65px;
+  font-size: 75px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .text h5 {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 550;
   margin-bottom: 20px;
 }
 
@@ -38,7 +38,7 @@
 .text p {
   font-family: "Jost", "Helvetica Neue", Arial, Verdana, sans-serif;
   line-height: 1.5;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 20px;
   line-height: 25px;
   letter-spacing: 2px;
@@ -111,7 +111,7 @@
   }
 
   .text p {
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 30px;
@@ -125,9 +125,8 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1600px) {
   .about {
-    right: 60px; /* Adjust the right offset value as needed */
-    margin-right: 0; /* Reset the right margin */
+    right: 100px;
+    margin-right: 100px;
+    max-width: 1130px;
   }
-
-  /* Rest of the styles... */
 }
