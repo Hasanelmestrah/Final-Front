@@ -6,6 +6,14 @@
   right: 0;
 }
 
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 47rem;
+}
+
 .jimu-primary-loading:before,
 .jimu-primary-loading:after {
   position: absolute;
